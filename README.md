@@ -102,3 +102,24 @@ function findTriangleArea(a, b, c){
 }
 
 findTriangleArea(5,6,7)
+
+5. Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front.
+
+```
+<body onload="animateText('target')">
+    <h2 id="target">W3Resource</h2>
+</body>
+
+
+function animateText(id) {
+  let element = document.getElementById(id);
+  let textNode = element.childNodes[0];
+  let text = textNode.data;
+
+  setInterval(function () {
+    text = text[text.length - 1] + text.substring(0, text.length - 1);
+    textNode.data = text;
+  }, 100);
+}
+
+```
