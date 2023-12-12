@@ -1,6 +1,7 @@
-function findLeapYear(year) {
-  // Return true if the year is divisible by 4 but not divisible by 100 unless it's also divisible by 400
-  return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
-}
+for (let year = 2014; year <= 2050; year++) {
+  let date = new Date(year, 0, 1);
 
-console.log(findLeapYear(2035));
+  if (date.getDay() === 0) {
+    console.log("1st Jan is being a Sunday " + year);
+  }
+}
