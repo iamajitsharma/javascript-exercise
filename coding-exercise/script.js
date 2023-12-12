@@ -1,10 +1,6 @@
-```function animateText(id) {
-  let element = document.getElementById(id);
-  let textNode = element.childNodes[0];
-  let text = textNode.data;
+function findLeapYear(year) {
+  // Return true if the year is divisible by 4 but not divisible by 100 unless it's also divisible by 400
+  return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
+}
 
-  setInterval(function () {
-    text = text[text.length - 1] + text.substring(0, text.length - 1);
-    textNode.data = text;
-  }, 100);
-}```;
+console.log(findLeapYear(2035));
