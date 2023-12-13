@@ -153,3 +153,120 @@ for(let year = 2014; year <= 2050; year++) {
 }
 
 ```
+
+8. Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".
+
+Solution
+
+```
+let number = Math.ceil(Math.random() * 10);
+
+let userInput = prompt("Enter number between 1 - 10");
+
+if(userInput == number){
+    console.log("Good Work")
+} else{
+    console.log("Match Not Found")
+}
+```
+
+9. Write a JavaScript program to calculate the days left before Christmas.
+
+```
+const today = new Date();
+const christmasDay = new Date(today.getFullYear(), 11, 25);
+let oneday = 1000 * 60 * 60 * 24;
+if(today.getMonth() == 11 && today.getDate() > 25) {
+    christmasDay.setFullYear(christmasDay.getFullYear()+1)
+}
+
+ let dayLeft = Math.ceil((christmasDay - today) / oneday);
+console.log(dayLeft)
+```
+
+10. Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
+
+Solution: We can perform same task with html form as well.
+
+```
+const userInput1 = prompt("Enter first number");
+const userInput2 = prompt("Enter second number");
+const operation = prompt("Enter operation operator");
+
+if(operation === "*"){
+    const result = parseInt(userInput1) * parseInt(userInput2);
+    console.log("Multiple of two number " + result)
+}
+
+if(operation === "/"){
+    const result = parseInt(userInput1) / parseInt(userInput2);
+    console.log("Division of two number " + result)
+}
+```
+
+11. Write a JavaScript exercise to get the filename extension.
+
+```
+const fileName = "myresume.docx";
+
+//this method will remove "." and result filename and extension in an array;
+
+const getFileExtension = fileName.split(".")
+
+//Using pop method remove last element from an array;
+console.log(getFileExtension.pop())
+```
+
+12. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.
+
+Solution
+
+```
+function findDifferences(number) {
+    if(number > 13) {
+        let result = (number - 13) * 2;
+        return result;
+    } else{
+        let result = 13 - number;
+        return result;
+    }
+}
+
+console.log(findDifferences(32))
+```
+
+13. Write a JavaScript program to compute the sum of the two given integers. If the two values are the same, then return triple their sum.
+
+Solution
+
+```
+function getSum(number1, number2) {
+    if(number1 === number2){
+        return ((number1 + number2) * 3);
+    } else{
+        return (number1 + number2);
+    }
+}
+
+console.log(getSum(5, 5));
+```
+
+14. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
+
+15. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
+
+Solution
+
+```
+function checkNumbersPair(num_1, num_2){
+    let sumTwoNumbers = num_1 + num_2;
+
+    if(num_1 === 50 || num_2 === 50 || sumTwoNumbers === 50) {
+        return true;
+    } else{
+        return false;
+    }
+}
+
+console.log(checkNumbersPair(45, 6))
+```
