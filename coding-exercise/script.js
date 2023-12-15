@@ -1,7 +1,15 @@
-for (let year = 2014; year <= 2050; year++) {
-  let date = new Date(year, 0, 1);
+function checkString(str) {
+  if (str.length <= 4) {
+    return false;
+  }
 
-  if (date.getDay() === 0) {
-    console.log("1st Jan is being a Sunday " + year);
+  let front = str.substring(0, 4);
+
+  if (front === "Java") {
+    return true;
+  } else {
+    return false;
   }
 }
+
+console.log(checkString("Jasvascript"));

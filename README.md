@@ -253,8 +253,6 @@ console.log(getSum(5, 5));
 
 14. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
 
-15. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
-
 Solution
 
 ```
@@ -269,4 +267,127 @@ function checkNumbersPair(num_1, num_2){
 }
 
 console.log(checkNumbersPair(45, 6))
+```
+
+15. Write a JavaScript program to check two given integers whether one is positive and another one is negative.
+
+Solution
+
+```
+function positive_negative(a, b) {
+  if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+positive_negative(2, 2);
+```
+
+16. Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string.
+
+Solution
+
+```
+function modifyString(str) {
+  if (str === null || str === undefined || str.substring(0, 2) === "Py") {
+    return str;
+  } else {
+    return "Py" + str;
+  }
+}
+
+console.log(modifyString("Py"));
+```
+
+17. Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.
+
+Solution
+
+```
+function removeCharacter(str, index) {
+  let firstStep = str.substring(0, index);
+  let lastStep = str.substring(index + 1, str.length);
+
+  return firstStep + lastStep;
+}
+
+console.log(removeCharacter("AjitSharma", 3));
+```
+
+18. Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
+
+Solution
+
+```
+function createNewString(str) {
+  if (str.length <= 1) {
+    return str;
+  }
+
+  let firstChar = str.substring(0, 1);
+  let lastChar = str.substring(str.length - 1, str.length);
+  let midCharacters = str.substring(1, str.length - 1);
+
+  return lastChar + midCharacters + firstChar;
+}
+
+console.log(createNewString("tjiA"));
+```
+
+19. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+
+Solution:
+
+```
+function checkNumber(number) {
+  if (number % 3 === 0 || number % 7 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(checkNumber(53));
+```
+
+20. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more.
+
+Solution
+
+```
+function generateString(str) {
+  if (str.length < 3) {
+    return str;
+  } else {
+    let last3Char = str.substring(str.length - 3, str.length);
+    let midChar = str.substring(0, str.length - 3);
+    console.log(midChar);
+    let result = last3Char + midChar + last3Char;
+    return result;
+  }
+}
+
+console.log(generateString("Aji"));
+```
+
+21. Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.
+
+```
+function checkString(str) {
+  if (str.length <= 4) {
+    return false;
+  }
+
+  let front = str.substring(0, 4);
+
+  if (front === "Java") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(checkString("Jasvascript"));
 ```
