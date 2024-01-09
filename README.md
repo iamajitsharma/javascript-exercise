@@ -391,3 +391,64 @@ function checkString(str) {
 
 console.log(checkString("Jasvascript"));
 ```
+
+22. Write a JavaScript program to find the largest of three given integers.
+
+```
+function findLargetNumber(a, b, c) {
+  return Math.max(a, b, c);
+}
+
+console.log(findLargetNumber(-5, -1, 5));
+```
+
+23. Write a JavaScript program to find the closest value to 100 from two numerical values.
+
+```
+function findClosestToHundred(a, b) {
+  if (a != b) {
+    //Calculate the absolute difference betwen a - 100
+    const firstAbsNo = Math.abs(a - 100);
+
+    //Calculate the absolute difference between b - 100
+    const secondAbsNo = Math.abs(b - 100);
+
+    if (firstAbsNo < secondAbsNo) {
+      return a;
+    } else {
+      return b;
+    }
+  } else {
+    return "Given both number is at the same distance from 100";
+  }
+}
+
+console.log(findClosestToHundred(99, 99));
+```
+
+24. Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.
+
+```
+function checkCharacter(str, c) {
+  const range = str.substring(1, 4);
+  return range.includes(c);
+}
+
+console.log(checkCharacter("javascript", "v"));
+```
+
+25. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.
+
+```
+function camelCase(str) {
+  if (str.length < 3) {
+    return str.toUpperCase();
+  }
+
+  const lowerCase = str.substring(0, 3).toLowerCase();
+  const secondPart = str.substring(3, str.length);
+  return lowerCase + secondPart;
+}
+
+console.log(camelCase("FULLSTACK"));
+```
