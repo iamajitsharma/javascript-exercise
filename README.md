@@ -452,3 +452,40 @@ function camelCase(str) {
 
 console.log(camelCase("FULLSTACK"));
 ```
+
+26. Write a JavaScript program to capitalize the first letter of each word in a given string.
+
+```
+function capitalizeEachWord(str) {
+  str = str.split(" ");
+
+  for (let i = 0; i < str.length; i++) {
+    str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+  }
+
+  return str.join(" ");
+}
+
+console.log(capitalizeEachWord("i ajit sharma and i am frontend developer"));
+
+```
+
+27. Write a JavaScript program to convert letters of a given string alphabetically.
+
+```
+function convertLetters(letters) {
+  return letters.split("").sort().join("");
+}
+
+console.log(convertLetters("javascript"));
+```
+
+28. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
+
+```
+function checkCharacters(str) {
+  return /a...b/.test(str) || /b...a/.test(str);
+}
+
+console.log(checkCharacters("Chainsbreak"));
+```
